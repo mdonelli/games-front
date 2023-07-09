@@ -1,0 +1,10 @@
+<ng-container *ngFor="let game of games">
+  <div class="wrapper" (click)="launchGame(game)"
+       *ngIf="(!categoryFilter || categoryFilter === game.brand_category) && (!providerFilter || providerFilter === game.provider_name)">
+    <div class="portrait" [attr.style]="'background-image: url(' + imageUrl + game.launchcode + imageExtension + ')'">
+      <app-hot-game *ngIf="game.brand_is_hot"></app-hot-game>
+      <app-new-game *ngIf="game.brand_is_new"></app-new-game>
+    </div>
+    <div class="title">{{ game.name }}</div>
+  </div>
+</ng-container>

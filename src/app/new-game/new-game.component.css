@@ -1,0 +1,14 @@
+:host {
+  width: 200px;
+  height: 20px;
+  background-color: var(--games-color);
+  color: var(--font-color-light);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 20px;
+  right: -70px;
+  transform: rotate(-45deg);
+}

@@ -1,0 +1,39 @@
+:host {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+:host:empty:after {
+  content: "There are no games for this category";
+  min-width: 300px;
+  min-height: 150px;
+}
+
+.wrapper {
+  margin: 10px;
+}
+
+.portrait {
+  width: 240px;
+  height: 180px;
+  background-size: 100% auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+.title {
+  min-width: 80px;
+  padding: 5px;
+  border-radius: 20px;
+  text-align: center;
+  margin: 8px 4px;
+}
+
+.wrapper:hover .title {
+  background-color: var(--games-color);
+  color: var(--font-color-light);
+}

@@ -2,6 +2,19 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.3.
 
+##Games App
+
+<p>This is an example project with php backend and angular frontend. The backend is in another repository. The site lists games for the selected brand and country and filters blocked games.
+
+##Setup
+
+- Node version: v20.3.1
+- Npm version: 9.7.2
+- Run: npm install
+- Create your environment.development.ts config file in the environments folder, from the default environment.ts.
+- Set your apiUrl (The ip address of the project's backend server).
+- Optionally change gameImageUrl and gameImageExtension values. 
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.

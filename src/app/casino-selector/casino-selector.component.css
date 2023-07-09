@@ -1,0 +1,23 @@
+::ng-deep body:has(app-casino-selector) {
+  background-color: blueviolet;
+}
+
+:host {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+h3 {
+  padding: 50px;
+  text-align: center;
+}
+
+.banner-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 860px;
+}
+

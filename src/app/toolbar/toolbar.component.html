@@ -1,0 +1,20 @@
+<div class="button"
+     [ngClass]="{'active': categoryFilter === null && !isShowingProviders}"
+     (click)="changeCategory(null)">
+  ALL GAMES
+</div>
+<div class="button"
+     *ngFor="let category of categories"
+     [ngClass]="{'active': categoryFilter === category}"
+     (click)="changeCategory(category)">
+  {{ category | display }}
+</div>
+<div class="button"
+     [ngClass]="{'active': isShowingProviders}"
+     (click)="showProviders()">
+  PROVIDERS
+</div>
+<div class="button" *ngIf="providerFilter"
+     [ngClass]="{'active': providerFilter}">
+  {{ providerFilter | display }}
+</div>

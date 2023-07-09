@@ -1,0 +1,19 @@
+<div class="game-loader">
+  <label>Launch code: {{ game.launchcode }}</label>
+  <app-loader></app-loader>
+  <div class="button back" (click)="stopPlaying()">Back</div>
+</div>
+<div class="info">
+  <div>
+    <label>Name:</label><label>{{ game.name }}</label>
+  </div>
+  <div>
+    <label>Provide:</label><label>{{ game.provider_name }}</label>
+  </div>
+  <div>
+    <label>Category:</label><label>{{ game.brand_category }}</label>
+  </div>
+  <div>
+    <label>RTP:</label><label>{{ game.rtp }}%</label>
+  </div>
+</div>

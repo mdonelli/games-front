@@ -1,0 +1,24 @@
+:host {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 15px;
+}
+
+:host > div {
+  width: 150px;
+  padding: 5px 10px;
+  margin: 4px;
+  border: 2px solid var(--games-color);
+  border-radius: 20px;
+  text-align: center;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+:host > div:hover {
+  background-color: var(--games-color);
+  color: var(--font-color-light);
+}

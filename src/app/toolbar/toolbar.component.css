@@ -1,0 +1,28 @@
+:host {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px 2px 4px 2px;
+  min-height: 34px;
+  font-size: 14px;
+}
+
+.button {
+  min-width: 80px;
+  padding: 5px;
+  border-radius: 20px;
+  text-align: center;
+  border: 2px solid transparent;
+  margin: 2px;
+}
+
+.button:hover {
+  border: 2px solid var(--games-color);
+}
+
+.active {
+  border: 2px solid var(--games-color);
+  background-color: var(--games-color);
+  color: var(--font-color-light);
+}

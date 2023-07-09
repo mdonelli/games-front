@@ -1,0 +1,8 @@
+<div #flags class="flags">
+  <ng-container *ngFor="let countryIcon of countries">
+    <div class="wrapper" (click)="changeCountry(countryIcon.name)" [ngClass]="{'active': countryIcon.name === country}">
+      <img [src]="countryIcon.src">
+    </div>
+  </ng-container>
+</div>
+<div class="wrapper"></div>

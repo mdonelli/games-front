@@ -1,0 +1,41 @@
+:host {
+  display: block;
+  margin: 15px;
+  text-align: center;
+  width: 400px;
+  height: 200px;
+  background-color: #e87070;
+  font-size: 24px;
+}
+
+:host > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+:host:nth-of-type(2n) {
+  background-color: #d3713c;
+}
+
+:host:nth-of-type(3n) {
+  background-color: #e5de34;
+}
+
+:host:nth-of-type(4n) {
+  background-color: #6cc23b;
+}
+
+:host:nth-of-type(5n) {
+  background-color: #51e0dc;
+}
+
+:host:nth-of-type(6n) {
+  background-color: #4283d0;
+}
+
+:host:nth-of-type(7n) {
+  background-color: #d324e8;
+}

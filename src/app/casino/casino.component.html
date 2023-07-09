@@ -1,0 +1,38 @@
+<div class="title-bar">
+  <div class="brand">Welcome to Casino Number {{ brandid }}</div>
+  <app-country-selector [country]="country" (countryChangeEvent)="onChangeCounty($event)"></app-country-selector>
+  <div class="greet">Hello, there! You are from {{ country }}</div>
+</div>
+<div class="casino-banner">
+  <img src="/assets/casino/sprite.png">
+</div>
+<div class="gradient"></div>
+<div class="games">
+    <ng-container *ngIf="games.length > 0">
+      <app-toolbar
+        [categories]="categories"
+        [categoryFilter]="categoryFilter"
+        [providerFilter]="providerFilter"
+        [isShowingProviders]="isShowingProviders"
+        (changeCategoryEvent)="onChangeCategory($event)"
+        (showProvidersEvent)="onShowProviders()"></app-toolbar>
+    </ng-container>
+  <!-- show loader when no games loaded -->
+  <ng-container *ngIf="games.length === 0">
+    <app-loader></app-loader>
+  </ng-container>
+  <!-- show game if launched -->
+  <ng-container *ngIf="activeGame">
+    <app-running-game [game]="activeGame" (stopPlayingEvent)="onStopPlaying()"></app-running-game>
+  </ng-container>
+  <!-- show providers -->
+  <ng-container *ngIf="isShowingProviders">
+    <app-providers [providers]="providers" (providerSelectedEvent)="onChangeProvider($event)"></app-providers>
+  </ng-container>
+  <!-- show games -->
+  <ng-container *ngIf="games.length > 0 && !isShowingProviders && !activeGame">
+    <app-games-container [games]="games" [categoryFilter]="categoryFilter"
+                         [providerFilter]="providerFilter"
+                         (gameLaunchEvent)="onGameLaunch($event)"></app-games-container>
+  </ng-container>
+</div>
