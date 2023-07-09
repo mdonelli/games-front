@@ -2,11 +2,11 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.3.
 
-##Games App
+## Games App
 
 <p>This is an example project with php backend and angular frontend. The backend is in another repository. The site lists games for the selected brand and country and filters blocked games.
 
-##Setup
+## Setup
 
 - Node version: v20.3.1
 - Npm version: 9.7.2
