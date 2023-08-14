@@ -31,30 +31,18 @@ export class CasinoComponent implements OnInit {
     this.games = [];
     this.gameService.getGames(this.brandid, this.country).subscribe((data: Game[]) => {
       this.games = data;
-      this.extractCategories(data);
-      this.extractProviders(data);
+      this.categories = this.extractCategories(data);
+      this.providers = this.extractProviders(data);
       this.resetSelection();
     });
   }
 
   extractCategories(data: Game[]) {
-    const categories: string[] = []
-    data.forEach((game: Game) => {
-      if (categories.indexOf(game.brand_category) < 0) {
-        categories.push(game.brand_category);
-      }
-    });
-    this.categories = categories;
+    return [...new Set(data.map((game: Game) => game.brand_category ))] as unknown as string[];
   }
 
   extractProviders(data: Game[]) {
-    const providers: string[] = []
-    data.forEach((game: Game) => {
-      if (providers.indexOf(game.provider_name) < 0) {
-        providers.push(game.provider_name);
-      }
-    });
-    this.providers = providers;
+    return [...new Set(data.map((game: Game) => game.provider_name ))] as unknown as string[];
   }
 
   resetSelection() {
