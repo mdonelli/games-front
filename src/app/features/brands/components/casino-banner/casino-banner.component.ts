@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {Brand} from "../brand";
+import {Brand} from "../../../../core/models/brand";
 
 
 @Component({

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpErrorResponse} from '@angular/common/http';
-import { Brand } from './brand';
-import {environment} from "../environments/environment";
+import { Brand } from '../../models/brand';
+import {environment} from "../../../../environments/environment";
 import {catchError, throwError} from "rxjs";
 
 @Injectable({

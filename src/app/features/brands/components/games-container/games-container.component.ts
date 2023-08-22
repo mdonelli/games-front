@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
-import {Game} from "../game";
-import {environment} from "../../environments/environment";
+import {Game} from "../../../../core/models/game";
+import {environment} from "../../../../../environments/environment";
 
 @Component({
   selector: 'app-games-container',

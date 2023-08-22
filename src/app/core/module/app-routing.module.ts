@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {CasinoComponent} from "./casino/casino.component";
-import {CasinoSelectorComponent} from "./casino-selector/casino-selector.component";
+import {CasinoComponent} from "../../features/brands/pages/casino/casino.component";
+import {CasinoSelectorComponent} from "../../features/brands/pages/casino-selector/casino-selector.component";
 
 const routes: Routes = [
   { path: ':brandid', component: CasinoComponent },
